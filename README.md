@@ -33,8 +33,8 @@ uvicorn app.main:app --reload
 - **Body (JSON):**
   ```json
   {
-    "email": "user@example.com",
-    "password": "yourpassword",
+    "email": "myproject@example.com",
+    "password": "somepassword",
     "role": "ops" // or "client"
   }
   ```
@@ -158,9 +158,9 @@ uvicorn app.main:app --reload
 
 ## Example .env file
 ```
-JWT_SECRET=your_jwt_secret
+JWT_SECRET=jwt_secret
 ENCRYPTION_KEY=your_fernet_key
-EMAIL_SENDER=your_email@gmail.com
+EMAIL_SENDER=email@gmail.com
 EMAIL_PASSWORD=your_email_app_password
 BASE_URL=http://localhost:8000
 ```
