@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "3b35ef50-7eed-4466-a0e9-69d03a374aed",
+		"name": "Postman_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32127224"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/auth/signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"saurabh@gmail.com\",\r\n  \"password\": \"strongpassword123\",\r\n  \"role\":\"ops\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/auth/verify-email/gAAAAABoZUgQ0lFMTS3JEMfKzsKFiFammk0cASknoKpeZkSUjnlCOTyfFYHPp2DnmVqNKFxMl7NX0rBJpfaVQgyKQTIsjW862tdyvG0UyUj4AzqPHTeTbFC19c5sbm4Noy0pIgpyi8Ie",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/auth/verify-email/gAAAAABoZUgQ0lFMTS3JEMfKzsKFiFammk0cASknoKpeZkSUjnlCOTyfFYHPp2DnmVqNKFxMl7NX0rBJpfaVQgyKQTIsjW862tdyvG0UyUj4AzqPHTeTbFC19c5sbm4Noy0pIgpyi8Ie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"verify-email",
+						"gAAAAABoZUgQ0lFMTS3JEMfKzsKFiFammk0cASknoKpeZkSUjnlCOTyfFYHPp2DnmVqNKFxMl7NX0rBJpfaVQgyKQTIsjW862tdyvG0UyUj4AzqPHTeTbFC19c5sbm4Noy0pIgpyi8Ie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/ops/upload",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4YTBiM2M5Ni03MjhmLTRiYTgtYThjZS0wOGRhODI3OTlhOGIiLCJyb2xlIjoib3BzIn0.tpY35EkMyZLNBftXzHlGRXKzH2U5VFTneZcT92rURc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Saurabh Anand/Downloads/SE - Unit 3.pptx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/ops/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ops",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/client/files",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZGFlYTlkZi00NTIzLTQ2ZDktYWI3NS04ODY1MzQ3MjYzNzEiLCJyb2xlIjoiY2xpZW50In0.je1hdP4ifoOpzjVWx1ARA1EPXsrwp8HkvlMLd9bMAgA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/client/files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/client/download-file/80c0c55c-3198-4cb0-9281-9e60c685580b",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZGFlYTlkZi00NTIzLTQ2ZDktYWI3NS04ODY1MzQ3MjYzNzEiLCJyb2xlIjoiY2xpZW50In0.je1hdP4ifoOpzjVWx1ARA1EPXsrwp8HkvlMLd9bMAgA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/client/download-file/80c0c55c-3198-4cb0-9281-9e60c685580b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"download-file",
+						"80c0c55c-3198-4cb0-9281-9e60c685580b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/auth/signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"saurabhhandm@gmail.com\",\r\n  \"password\": \"strongpassword123\",\r\n  \"role\":\"client\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/client/files",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/client/files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/client/download/gAAAAABoZW62BoXLsAON795iH2Qgs-uRkgaNjkfW3mHqI1hiAfFLKPlTkU4SDEmoZ1yVgYf1qH58_iQKCYNIkTfLNcWRbp5qM_5wCwg_vflfTKhzHVhnDNVKg4DMH82EZUcPrFnMYXv9",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3NTYyYjNjMC0xMmQ1LTQ0ZDEtYjVjYi1hMzY5ODc0MWQ3YzEiLCJyb2xlIjoiY2xpZW50In0.SZ62VZ_-WdbHygX4ftXMxskHRHh-5fNuG-UitEVbGbs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/client/download/gAAAAABoZW62BoXLsAON795iH2Qgs-uRkgaNjkfW3mHqI1hiAfFLKPlTkU4SDEmoZ1yVgYf1qH58_iQKCYNIkTfLNcWRbp5qM_5wCwg_vflfTKhzHVhnDNVKg4DMH82EZUcPrFnMYXv9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"download",
+						"gAAAAABoZW62BoXLsAON795iH2Qgs-uRkgaNjkfW3mHqI1hiAfFLKPlTkU4SDEmoZ1yVgYf1qH58_iQKCYNIkTfLNcWRbp5qM_5wCwg_vflfTKhzHVhnDNVKg4DMH82EZUcPrFnMYXv9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/uploads/f309d860-cb82-4c22-9787-f45da4fb1af8",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/uploads/f309d860-cb82-4c22-9787-f45da4fb1af8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"uploads",
+						"f309d860-cb82-4c22-9787-f45da4fb1af8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/auth/signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"registere@gmail.com\",\r\n  \"password\": \"strongpassword123\",\r\n  \"role\":\"ops\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/auth/verify-email/gAAAAABoZgJ4o4XfcfFmF8ZGEGfp5tX-CGmFrfZq3JVvVKUG0-8xtqCMUbsYczOG-bhHieP_JV5u5PIyNANsbjHJlQGvZyxxsm9pCbB3oc1eC6i_ckYLbyo5qDytg5l-hUVAK7seYS9a",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/auth/verify-email/gAAAAABoZgJ4o4XfcfFmF8ZGEGfp5tX-CGmFrfZq3JVvVKUG0-8xtqCMUbsYczOG-bhHieP_JV5u5PIyNANsbjHJlQGvZyxxsm9pCbB3oc1eC6i_ckYLbyo5qDytg5l-hUVAK7seYS9a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"verify-email",
+						"gAAAAABoZgJ4o4XfcfFmF8ZGEGfp5tX-CGmFrfZq3JVvVKUG0-8xtqCMUbsYczOG-bhHieP_JV5u5PIyNANsbjHJlQGvZyxxsm9pCbB3oc1eC6i_ckYLbyo5qDytg5l-hUVAK7seYS9a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"saurabh@gmail.com\",\r\n  \"password\": \"strongpassword123\",\r\n  \"role\":\"ops\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/auth/verify-email/gAAAAABoZggJK8VvL5nXV59hJapUfdc9nlV1d2q-CIGSUMoyR0HKiFRJAqGpCF0v_neY8XGbzcMXqGtRwIXYsnIbYkRRgqRKS5uG6srZUXYuPva3G23nBzi2BFkcypKws40a8sbmdhpI",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/auth/verify-email/gAAAAABoZggJK8VvL5nXV59hJapUfdc9nlV1d2q-CIGSUMoyR0HKiFRJAqGpCF0v_neY8XGbzcMXqGtRwIXYsnIbYkRRgqRKS5uG6srZUXYuPva3G23nBzi2BFkcypKws40a8sbmdhpI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"verify-email",
+						"gAAAAABoZggJK8VvL5nXV59hJapUfdc9nlV1d2q-CIGSUMoyR0HKiFRJAqGpCF0v_neY8XGbzcMXqGtRwIXYsnIbYkRRgqRKS5uG6srZUXYuPva3G23nBzi2BFkcypKws40a8sbmdhpI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"saurabhhandm@gmail.com\",\r\n  \"password\": \"strongpassword123\",\r\n  \"role\":\"client\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/client/download/gAAAAABoZhRyNaSCsQgLMphsohPwjZvhwjNOJLEPnAcBMLuFNjQ0d6PoBS1mDYRCtMqUDbDDuWPT0l8WbjW6814y1hiYRXYhVNIhBR2SxStM6fU_jwxCUvddHad0Ml1vBlXk725iesOo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZGFlYTlkZi00NTIzLTQ2ZDktYWI3NS04ODY1MzQ3MjYzNzEiLCJyb2xlIjoiY2xpZW50In0.je1hdP4ifoOpzjVWx1ARA1EPXsrwp8HkvlMLd9bMAgA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/client/download/gAAAAABoZhRyNaSCsQgLMphsohPwjZvhwjNOJLEPnAcBMLuFNjQ0d6PoBS1mDYRCtMqUDbDDuWPT0l8WbjW6814y1hiYRXYhVNIhBR2SxStM6fU_jwxCUvddHad0Ml1vBlXk725iesOo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"download",
+						"gAAAAABoZhRyNaSCsQgLMphsohPwjZvhwjNOJLEPnAcBMLuFNjQ0d6PoBS1mDYRCtMqUDbDDuWPT0l8WbjW6814y1hiYRXYhVNIhBR2SxStM6fU_jwxCUvddHad0Ml1vBlXk725iesOo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/uploads\\\\80c0c55c-3198-4cb0-9281-9e60c685580b",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/uploads\\\\80c0c55c-3198-4cb0-9281-9e60c685580b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"uploads",
+						"",
+						"80c0c55c-3198-4cb0-9281-9e60c685580b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
