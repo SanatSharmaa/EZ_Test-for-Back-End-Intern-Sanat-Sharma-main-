@@ -1,7 +1,7 @@
-# Secure File Sharing API
+# SafeSync EZ INTERNSHIP ASSESSMENT
 
 ## Overview
-A FastAPI backend for secure file sharing between users with different roles (ops, client). Supports user registration, email verification, JWT authentication, file upload (local), and secure download links.
+A FastAPI-based backend that enables secure file sharing between two types of users: `ops` and `client`. It provides features such as user registration, email verification, JWT-based authentication, file uploads (local), and encrypted download links.
 
 ---
 
@@ -33,8 +33,8 @@ uvicorn app.main:app --reload
 - **Body (JSON):**
   ```json
   {
-    "email": "myproject@example.com",
-    "password": "somepassword",
+    "email": "sanatsharma@example.com",
+    "password": "passwordis123",
     "role": "ops" // or "client"
   }
   ```
